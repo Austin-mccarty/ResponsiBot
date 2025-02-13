@@ -155,7 +155,7 @@ class PopupController {
         </div>
       `).join('');
 
-      // Set up accordion toggles and XPath copy functionality.
+
       document.querySelectorAll('.issue-header').forEach(header => {
         header.addEventListener('click', () => {
           const issueEl = header.parentElement;

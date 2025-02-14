@@ -16,7 +16,7 @@ cd responsibot
 
 2. Create development branch:
 ```bash
-git checkout -b feature/your-feature-name
+git checkout -b your-feature-name
 ```
 
 3. Load in Chrome:
@@ -35,8 +35,8 @@ git checkout -b feature/your-feature-name
 3. Commit changes:
 ```bash
 git add .
-git commit -m "feat: description of changes"
-git push origin feature/your-feature-name
+git commit -m "description of changes"
+git push origin your-feature-name
 ```
 
 ### Pull Requests

@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ResponsiBot Analysis</title>
-  <link rel="stylesheet" href="popup.css" />
-</head>
-<body>
-  <div id="app">
-    <header class="header">
-      <h1>ResponsiBot</h1>
-      <button id="analyze" class="btn">Analyze</button>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Audit Tool</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Website Audit Tool</h1>
 
-    <div class="content">
-      <section class="summary-section">
-        <h2>Analysis Summary</h2>
-        <div id="summary"></div>
-      </section>
+      <div class="form-group">
+        <label for="audit-type">Select Audit Type:</label>
+        <select id="audit-type" class="form-control">
+          <option value="setup">Website Setup</option>
+          <option value="header" disabled>Header (Coming Soon)</option>
+          <option value="homepage" disabled>Homepage (Coming Soon)</option>
+          <option value="srp" disabled>SRP (Coming Soon)</option>
+          <option value="vdp" disabled>VDP (Coming Soon)</option>
+          <option value="landing" disabled>Landing Page (Coming Soon)</option>
+        </select>
+      </div>
 
-      <section class="screenshot-section">
-        <h2>Screenshot</h2>
-        <div id="screenshot-container"></div>
-      </section>
+      <button id="start-audit" class="btn">Start Audit</button>
 
-      <section class="issues-section">
-        <div class="issues-header">
-          <h2>Issues</h2>
-          <div class="issues-filters">
-            <div class="filter">
-              <label for="category-filter">Category:</label>
-              <select id="category-filter">
-                <option value="all">All</option>
-                <option value="accessibility">Accessibility</option>
-                <option value="seo">SEO</option>
-                <option value="performance">Performance</option>
-                <option value="responsive">Responsive</option>
-                <option value="security">Security</option>
-              </select>
-            </div>
-            <div class="filter">
-              <label for="severity-filter">Severity:</label>
-              <select id="severity-filter">
-                <option value="all">All</option>
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div id="issues-container"></div>
-      </section>
+      <div id="results" class="results-container">
+        <div id="summary" class="summary-section"></div>
+        <div id="issues" class="issues-section"></div>
+      </div>
     </div>
-
+    <script src="popup.js"></script>
     <footer class="footer">
-      <p>Powered by <img src="https://www.gosokal.com/images/sokal-logo-color.png" style="width: 10%;"></p>
+      <p>
+        Powered by
+        <img
+          src="https://www.gosokal.com/images/sokal-logo-color.png"
+          style="width: 15%"
+          alt="Sokal Logo"
+        />
+      </p>
     </footer>
-  </div>
-  <script src="popup.js"></script>
-</body>
+  </body>
 </html>

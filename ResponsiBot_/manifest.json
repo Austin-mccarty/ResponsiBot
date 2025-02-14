@@ -2,12 +2,18 @@
   "manifest_version": 3,
   "name": "ResponsiBot",
   "version": "1.0",
-  "description": "Analyze webpage accessibility, SEO, and performance",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Website Audit Tool"
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["audit.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

@@ -1,16 +1,10 @@
 # ResponsiBot Chrome Extension
 
-A Chrome extension that analyzes web pages for accessibility, SEO, performance, and security issues.
+A Chrome extension for Sokal website auditing.
 
 ## Features
-
-- Real-time webpage analysis
-- Accessibility compliance checking (WCAG)
-- SEO optimization suggestions
-- Performance metrics and recommendations
-- Security vulnerability detection
-- Detailed reports with solutions
-- Custom filtering by category and severity
+- Website setup validation
+- More features coming soon
 
 ## Installation
 
@@ -20,17 +14,24 @@ git clone https://github.com/Austin-mccarty/responsibot.git
 cd responsibot
 ```
 
-2. Create a new branch for development:
+2. Create development branch:
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
-3. Load the extension in Chrome:
-- Open Chrome and navigate to `chrome://extensions/`
-- Enable "Developer mode" in the top right
+3. Load in Chrome:
+- Go to `chrome://extensions/`
+- Enable "Developer mode"
 - Click "Load unpacked"
 - Select the project directory
 
+## Development Workflow
+
+### Making Changes
+1. Update necessary files
+2. Test in Chrome:
+   - Refresh extension
+   - Test on sample pages
 3. Commit changes:
 ```bash
 git add .
@@ -38,24 +39,35 @@ git commit -m "feat: description of changes"
 git push origin feature/your-feature-name
 ```
 
-4. Create a pull request:
-- Go to the repository on GitHub
-- Click "New Pull Request"
-- Select your feature branch
-- Add description and request review
+### Pull Requests
+1. Go to GitHub repository
+2. Click "New Pull Request"
+3. Select your feature branch
+4. Add description and request review
 
-## Reload Extension
+### Project Structure
+```
+responsibot/
+├── audit.js         # Core audit logic
+├── background.js    # Background worker
+├── manifest.json    # Extension config
+├── popup.html      # Extension UI
+├── popup.css       # Styling
+└── popup.js        # UI controller
+```
 
+### Reload Extension
 After making changes:
 1. Go to `chrome://extensions/`
 2. Find ResponsiBot
 3. Click the refresh icon
-4. Reload the webpage being tested
+4. Reload test page
 
 ## Contributing
+1. Fork repository
+2. Create feature branch
+3. Make changes
+4. Submit pull request
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/FeatureName`)
-3. Commit changes (`git commit -m 'Add feature'`)
-4. Push branch (`git push origin feature/FeatureName`)
-5. Open pull request
+## License
+MIT License

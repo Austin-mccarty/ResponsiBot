@@ -68,6 +68,3 @@ After making changes:
 2. Create feature branch
 3. Make changes
 4. Submit pull request
-
-## License
-MIT License
